@@ -21,15 +21,15 @@ environment:
   # Github token to commit pushed packages to repository
   github_user_repo: {github_user}/{repository}
   github_api_key:
-    secure: YOUR_GITHUB_API_KEY_HERE_ENCRYPTED_STRING #https://ci.appveyor.com/tools/encrypt
+    secure: E3OEANQ5X2cvXUgyxO4q/Z9Ez9GMSBRZLKwxrsnNxISWc9VtqKWJoqF81MsZaU1n #https://ci.appveyor.com/tools/encrypt
 
 
   # Mail credentials - for error notifications
   mail_user:
-    secure: YOUR_EMAIL_ACCOUNT_HERE_ENCRYPTED_STRING #https://ci.appveyor.com/tools/encrypt
+    secure: AepTaxRJXrlCYjfV929HzQ== #https://ci.appveyor.com/tools/encrypt
   mail_pass:
-    secure: YOUR_EMAIL_PASSWORD_HERE_ENCRYPTED_STRING #https://ci.appveyor.com/tools/encrypt
-  mail_server: smtp.gmail.com
+    secure: 8FVLgHeIiBBG1ti0l2sdvBafwlCyolGMwlnv/QlVB1E= #https://ci.appveyor.com/tools/encrypt
+  mail_server: smtp.blickfeld7.com
   mail_port: 587
   mail_enablessl: true
 

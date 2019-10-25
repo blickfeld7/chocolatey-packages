@@ -1,6 +1,6 @@
 import-module au
 
-$url = 'http://www.sonatype.org/downloads/nexus-latest-bundle.zip'
+$url = 'https://www2.mcneel.com/updates/06bb1079-5a56-47a1-ad6d-0b45183d894b/release/win64/en-us/stable'
 
 function global:au_SearchReplace {
     @{
@@ -21,7 +21,7 @@ function global:au_GetLatest {
         $url = $location
     }
 
-    $version = ($url -split '-|\.' | select -Last 4 -skip 2) -join '.'
+    $version = ($url -split '-|\.' | Select-Object -Last 4 -skip 2) -join '.'
     $Latest = @{ URL = $url; Version = $version }
     return $Latest
 }
