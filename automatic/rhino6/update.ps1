@@ -16,9 +16,11 @@ function global:au_GetLatest {
         $request = [System.Net.WebRequest]::Create($url)
         $request.AllowAutoRedirect=$false
         $response=$request.GetResponse()
+
+        # getresponsebody and the <a> href instead of header location
         $location = $response.GetResponseHeader('Location')
         if (!$location -or ($location -eq $url)) { break }
-        $url = $location
+            $url = $location
     }
 
     $version = ($url -split '-|\.' | Select-Object -Last 4 -skip 2) -join '.'
