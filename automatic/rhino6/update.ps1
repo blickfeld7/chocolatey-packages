@@ -8,7 +8,7 @@ function global:au_SearchReplace {
             "(^[$]url\s*=\s*)('.*')"       = "`$1'$($Latest.URL)'"
             "(^[$]checksum\s*=\s*)('.*')"  = "`$1'$($Latest.Checksum32)'"
         }
-     }
+    }
 }
 
 function global:au_GetLatest {
