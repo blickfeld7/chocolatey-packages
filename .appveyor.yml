@@ -35,14 +35,14 @@ environment:
 
   # ID of the gist used to save run results - create a gist under the github_user (secret or not) and grab the id - https://gist.github.com/name/id
   # Optional, leave empty to create anonymous gist
-  gist_id:
+  gist_id: 84807e4bbf71b96c70d06deb17e75925
 
   # Force test: gist id for test results
-  gist_id_test:
+  gist_id_test: 84807e4bbf71b96c70d06deb17e75925 #https://gist.github.com/blickfeld7/
 
   # Chocolatey API key - to push updated packages
   api_key:
-    secure: YOUR_CHOCO_API_KEY_HERE_ENCRYPTED_STRING # https://ci.appveyor.com/tools/encrypt
+    secure: 0anaq+l4aK/Gjd4Re1nSpyR2h0JQpDNlx3vJihRHGWGSP5Ti+uN5+Md48qW1Naot # https://ci.appveyor.com/tools/encrypt
 
 init:
 - git config --global user.email "chocolatey@realdimensions.net"

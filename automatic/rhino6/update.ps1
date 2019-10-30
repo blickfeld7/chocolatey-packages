@@ -1,4 +1,4 @@
-import-module au
+Import-Module au
 
 $url = 'https://www2.mcneel.com/updates/06bb1079-5a56-47a1-ad6d-0b45183d894b/release/win64/en-us/stable'
 
@@ -12,18 +12,11 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    while($true) {
-        $request = [System.Net.WebRequest]::Create($url)
-        $request.AllowAutoRedirect=$false
-        $response=$request.GetResponse()
-
-        # getresponsebody and the <a> href instead of header location
-        $location = $response.GetResponseHeader('Location')
-        if (!$location -or ($location -eq $url)) { break }
-            $url = $location
-    }
-
-    $version = ($url -split '-|\.' | Select-Object -Last 4 -skip 2) -join '.'
+    $download_page = Invoke-WebRequest -Uri $url -UseBasicParsing
+    $regex   = '.exe$'
+    $url     = $download_page.links | Where-Object href -match $regex | Select-Object -First 1 -expand href
+    $version = $url -split '_|.exe' | Select-Object -Last 1 -Skip 1
+    
     $Latest = @{ URL = $url; Version = $version }
     return $Latest
 }
