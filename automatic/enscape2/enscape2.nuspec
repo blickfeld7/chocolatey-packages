@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>enscape2</id>
+    <version>2.6.0</version>
+    <authors>Enscape GmbH</authors>
+    <projectUrl>https://enscape3d.com/downloads</projectUrl>
+    <packageSourceUrl>http://github.com/blickfeld7/chocolatey-packages/automatic/enscape2</packageSourceUrl>
+    <owners>blickfeld7</owners>
+    <title>Enscape™ 2.x</title>
+    <iconUrl>https://raw.githubusercontent.com/blickfeld7/chocolatey-packages/master/icons/rhino6.jpg</iconUrl>
+    <licenseUrl>https://enscape3d.com/download/Enscape_EULA.pdf</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.rhino3d.com/6/new/documentation</docsUrl>
+    <summary>Experience architectural projects within just a click! The real-time rendering now supports virtual reality with Oculus Rift &amp; HTC Vive.</summary>
+    <tags>enscape vr oculus htcvive rhino revit sketchup archicad</tags>
+    <description><![CDATA[
+Experience architectural projects within just a click! The real-time rendering now supports virtual reality with Oculus Rift &amp; HTC Vive.
+## General Information
+- [Official Website](https://enscape3d.com/)
+- [Knowledge Base](https://enscape3d.com/knowledge-base/)
+- [System Requirements](https://enscape3d.com/knowledgebase/system-requirements/)
+
+This package is provided by an AU project running on AppVeyor [![](https://ci.appveyor.com/api/projects/status/github/blickfeld7/chocolatey-packages?svg=true)](https://ci.appveyor.com/project/blickfeld7/chocolatey-packages)
+Find the detailed [update status here](https://gist.github.com/blickfeld7/84807e4bbf71b96c70d06deb17e75925)
+
+## Package Parameters
+
+- `/ACCEPTEULA` - Set to 1, the EULA will be automatically accepted. Set to 0 will require the user confirms acceptance of the EULA via a pop-up.
+- `/SKIPREQUIREMENTS` - Set to 1 will skip the requirements dialogue window.
+- `/ALLUSERS` - If set to 0, Enscape will only be installed for the currently logged in user. Set to 1 Enscape will be installed for all users.
+- `/INSTALLLOCATION` - Here you can set the path to the directory where you would like to install Enscape.
+- `/INSTALLLEVEL` - If set to 1 all the sub-features of Enscape will be installed. If set to 0 only the Enscape main feature will be installed.
+    You can then append this command with:
+    - `/ADDLOCAL` - Enscape[,ArchiCAD][,Rhino][,Revit][,SketchUp] – to install additional sub features.
+
+## Note
+By default, **installation** of this package will set **ACCEPTEULA, SKIPREQUIREMENTS, ALLUSERS and INSTALLLEVEL** to **1**.
+At the date of this document these were all available parameters. A more updated version may be found here: https://wiki.mcneel.com/rhino/installingrhino/6
+
+## Example
+These parameters can be passed to the installer with the use of `-params`.
+For example :
+`choco install enscape2 -params "/ALLUSERS:0 /INSTALLLOCATION:'Drive:\Path\To\Installation Directory' /INSTALLLEVEL:0 /ADDLOCAL:Enscape,SketchUp"`
+]]></description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

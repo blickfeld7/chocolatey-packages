@@ -5,11 +5,11 @@ $checksum   = '99912a024c669fc1d9c6cfb289e5a1469f9a785f20073b5fc0f6314db2924362'
 $silentArgs = '-package -quiet -norestart'
 
 $pp   = Get-PackageParameters # Reference: https://wiki.mcneel.com/rhino/installingrhino/6
-if (!$pp['ENABLE_AUTOMATIC_UPDATES'])
-{
-  $pp['ENABLE_AUTOMATIC_UPDATES'] = '0'
-}
 
+# set default arguments
+if (!$pp['ENABLE_AUTOMATIC_UPDATES']){ $pp['ENABLE_AUTOMATIC_UPDATES'] = '0' }
+
+# concatenate silent arguments
 foreach($p in $pp.keys)
 {
   if($pp.$p.length -lt 1){ continue }
