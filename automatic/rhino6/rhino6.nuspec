@@ -17,18 +17,64 @@
     <summary>Rhinoceros is a commercial 3D computer graphics and computer-aided design application software developed by Robert McNeel &amp; Associates</summary>
     <tags>rhino mcneel rhinoceros cad nurbs rhino3d rhinoceros3d</tags>
     <description><![CDATA[
+<img src="https://raw.githubusercontent.com/blickfeld7/chocolatey-packages/master/icons/rhino6.jpg" width="128" height="128" style="background:none; border:none; box-shadow:none;"/>
+
 Rhinoceros is a commercial 3D computer graphics and computer-aided design application software developed by Robert McNeel & Associates.
-## Useful Links
+## General Information
 - [Official Website](https://www.rhino3d.com/6)
 - [McNeel Website](https://www.mcneel.com/)
 - [McNeel Wiki](https://wiki.mcneel.com/)
 - [Tutorials](https://www.rhino3d.com/tutorials)
 - [Discussion Forums](https://discourse.mcneel.com/)
 - [Rhinoceros 3D on Wikipedia](https://en.wikipedia.org/wiki/Rhinoceros_3D)
+
+This package is provided by an AU project running on AppVeyor [![](https://ci.appveyor.com/api/projects/status/github/blickfeld7/chocolatey-packages?svg=true)](https://ci.appveyor.com/project/blickfeld7/chocolatey-packages)
+Find the detailed [update status here](https://gist.github.com/blickfeld7/84807e4bbf71b96c70d06deb17e75925)
+
+## Package Parameters
+
+- `/LICENSE_METHOD` - One of: STANDALONE, ZOO (leave blank for Cloud Zoo)
+- `/LICENSE_KEY` - The license key to install (**required if** LICENSE_METHOD=STANDALONE)
+- `/LICENSE_VALIDATION_CODE` - Validation code for your Rhino license
+- `/ZOO_SERVER` - IP or FQDN of Zoo server to query
+- `/INSTALLDIR` - Full path to folder where Rhino will be installed
+- `/CUSTOMER_NAME` - Customer name to show in splash screen
+- `/COMPANY_NAME` - Company name to show in splash screen
+- `/SEND_STATISTICS` - **1** = send anonymous installation statistics to McNeel (default); **0** = do not send
+- `/ENABLE_AUTOMATIC_UPDATES` - **0** = do not allow automatic updates and sending usage statistics; **1** = allow the installer to check for and download updates. In 6.14 and older, this doesn't affect Rhino's ability to check for updates; to disable updates for Rhino, disable the McNeel Update Service. (New in 6.15 - this setting passes through to Rhino and disables sending updates and usage statistics for all users on computer; this setting cannot be overridden on a per-user basis)
+- `/DISABLE_INTERNET_ACCESS` - **1** = Disable all internet access for the installer, Rhino, and McNeel Updates. This disables all internet access from Rhino, including automatic updates detection and download, sending anonymous usage statistics, online help, splash screen news and tips, downloading of rendering textures, access to the Cloud Zoo, and other features that try to access the internet.; **0** (default) = allow all internet access
+
+### Language Options
+Set to 1 to install the language, 0 to not install. The language of the installer is english. If you run the installation with only **INSTALL_FR=1**, you will get both English and French.
+
+| Language Parameters | Description |
+| ------ | ------ |
+| INSTALL_EN | English |
+| INSTALL_CN | Simplified Chinese |
+| INSTALL_CS | Czech |
+| INSTALL_DE | German |
+| INSTALL_ES | Spanish |
+| INSTALL_FR | French |
+| INSTALL_IT | Italian |
+| INSTALL_JA | Japanese |
+| INSTALL_KO | Korean |
+| INSTALL_PL | Polish |
+| INSTALL_PT | Portuguese |
+| INSTALL_RU | Russian |
+| INSTALL_TW | Traditional Chinese |
+
+## Note
+By default, **installation** of this package will set **ENABLE_AUTOMATIC_UPDATES** to **0**.
+At the date of this document these were all available parameters. A more updated version may be found here: https://wiki.mcneel.com/rhino/installingrhino/6
+
+## Example
+These parameters can be passed to the installer with the use of `-params`.
+For example :
+`choco install rhino6 -params "/LICENSE_METHOD:ZOO /ZOO_SERVER:10.0.0.1 /INSTALL_FR:1 /INSTALL_DE:1"`
 ]]></description>
     <releaseNotes>https://www.rhino3d.com/download/rhino-for-windows/6/latest/changes</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey" version="0.10" />
+      <dependency id="chocolatey-core.extension" version="1.1.0" />
     </dependencies>
   </metadata>
   <files>

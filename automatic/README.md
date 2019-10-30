@@ -1,6 +1,7 @@
 ## Automatic Folder
 
-This is where you put your Chocolatey packages that are automatically packaged up by either [AU](https://chocolatey.org/packages/au) or [Ketarin](https://chocolatey.org/packages/ketarin)/[ChocolateyPackageUpdater](https://chocolatey.org/packages/chocolateypackageupdater).
+This is where you put your Chocolatey packages that are automatically packaged up by [AU](https://chocolatey.org/packages/au)
+[ChocolateyPackageUpdater](https://chocolatey.org/packages/chocolateypackageupdater).
 
 ### Automatic Updater (AU)
 
@@ -13,4 +14,3 @@ To fully setup all the features ensure you perform the steps in the [setup/READM
 To get the packages that implement AU updater run `Get-AUPackages` or `lsau` in this directory.
 
 **NOTE:** Ensure when you are creating packages for AU, you don't use `--auto` as the packaging files should be normal packages. AU doesn't need the tokens to do replacement.
-
