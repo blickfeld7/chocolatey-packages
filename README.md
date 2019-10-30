@@ -1,13 +1,6 @@
 # Chocolatey Packages
-
-~~~
-<!-- EDIT ME-->
-
-[![](https://ci.appveyor.com/api/projects/status/github/YOUR_GITHUB_USERNAME_HERE/chocolatey-packages?svg=true)](https://ci.appveyor.com/project/YOUR_GITHUB_USERNAME_HERE/chocolatey-packages)
-[Update status](https://gist.github.com/YOUR_GITHUB_USERNAME_HERE/YOUR_GIST_ID)
-
-<!-- REMOVE THE squiggles "~" surrounding this (this should not be a code block) -->
-~~~
+[![](https://ci.appveyor.com/api/projects/status/github/blickfeld7/chocolatey-packages?svg=true)](https://ci.appveyor.com/project/blickfeld7/chocolatey-packages)
+[Update status](https://gist.github.com/blickfeld7/84807e4bbf71b96c70d06deb17e75925)
 
 ## Chocolatey Packages Template
 
@@ -43,20 +36,3 @@ For daily operations check out the AU packages [template README](https://github.
 1. Clone the repository locally.
 1. Head into the `setup` folder and perform the proper steps for your choice of setup (or both if you plan to use both methods).
 1. Edit this README. Update the badges at the top.
-
-
-### Recommendation on Auto Packaging
-
-AU provides more in the process of being completely automated, sending emails when things go wrong, and providing a nice report at the end. It doesn't have a bolt-on feeling to it that you see with Ketarin / ChocolateyPackageUdater, however the one thing it does lack in comparison is no visual feedback to seeing how searches for installers may be found. Other than that, it provides errors when things go wrong, where Ketarin doesn't consider anything that happens during "before run"/"post run updates" (where chocopkgup and checksumming occur) to be an error, even if those scripts error.
-
-So for best visibility, enjoying the ease of using AppVeyor, and for a nice report of results, we recommend AU over Ketarin. You also don't need to deal with templates as AU works directly with the xml/ps1 files to do replacement.
-
-### Use Both Methodologies
-
-The way this source repository is designed, you can use both AU and Ketarin/ChocolateyPackageUpdater together. This is especially helpful when migrating existing packages from one methodology to the other.
-
-### Migrating existing Ketarin packages to AU
-
-1. Add an update.ps1 to the package folder and determine how to update the package using [AU's instructions](https://github.com/majkinetor/au#creating-the-package-updater-script).
-1. Remove the ketarin.xml file from the ketarin folder.
-1. Ensure you also remove the package job from Ketarin itself as it doesn't automatically remove.

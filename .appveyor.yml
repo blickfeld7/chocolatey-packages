@@ -19,7 +19,7 @@ environment:
   au_test_groups: 1
 
   # Github token to commit pushed packages to repository
-  github_user_repo: {github_user}/{repository}
+  github_user_repo: blickfeld7/chocolatey-packages
   github_api_key:
     secure: E3OEANQ5X2cvXUgyxO4q/Z9Ez9GMSBRZLKwxrsnNxISWc9VtqKWJoqF81MsZaU1n #https://ci.appveyor.com/tools/encrypt
 
@@ -31,7 +31,7 @@ environment:
     secure: 8FVLgHeIiBBG1ti0l2sdvBafwlCyolGMwlnv/QlVB1E= #https://ci.appveyor.com/tools/encrypt
   mail_server: smtp.blickfeld7.com
   mail_port: 587
-  mail_enablessl: true
+  mail_enablessl: false
 
   # ID of the gist used to save run results - create a gist under the github_user (secret or not) and grab the id - https://gist.github.com/name/id
   # Optional, leave empty to create anonymous gist
