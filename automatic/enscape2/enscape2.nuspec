@@ -9,7 +9,7 @@
     <packageSourceUrl>http://github.com/blickfeld7/chocolatey-packages/automatic/enscape2</packageSourceUrl>
     <owners>blickfeld7</owners>
     <title>Enscape™ 2.x</title>
-    <iconUrl>https://raw.githubusercontent.com/blickfeld7/chocolatey-packages/master/icons/rhino6.jpg</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/blickfeld7/chocolatey-packages/master/icons/enscape2.jpg</iconUrl>
     <licenseUrl>https://enscape3d.com/download/Enscape_EULA.pdf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.rhino3d.com/6/new/documentation</docsUrl>
@@ -37,7 +37,7 @@ Find the detailed [update status here](https://gist.github.com/blickfeld7/84807e
 
 ## Note
 By default, **installation** of this package will set **ACCEPTEULA, SKIPREQUIREMENTS, ALLUSERS and INSTALLLEVEL** to **1**.
-At the date of this document these were all available parameters. A more updated version may be found here: https://wiki.mcneel.com/rhino/installingrhino/6
+At the date of this document these were all available parameters. A more updated version may be found here: https://enscape3d.com/knowledgebase/installer-program-options/
 
 ## Example
 These parameters can be passed to the installer with the use of `-params`.
