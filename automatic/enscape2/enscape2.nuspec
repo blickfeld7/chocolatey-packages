@@ -9,7 +9,7 @@
     <packageSourceUrl>http://github.com/blickfeld7/chocolatey-packages/automatic/enscape2</packageSourceUrl>
     <owners>blickfeld7</owners>
     <title>Enscape™ 2.x</title>
-    <iconUrl>https://raw.githubusercontent.com/blickfeld7/chocolatey-packages/master/icons/enscape2.jpg</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/blickfeld7/chocolatey-packages/master/icons/enscape2.png</iconUrl>
     <licenseUrl>https://enscape3d.com/download/Enscape_EULA.pdf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.rhino3d.com/6/new/documentation</docsUrl>
