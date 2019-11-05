@@ -12,7 +12,7 @@
     <iconUrl>https://raw.githubusercontent.com/blickfeld7/chocolatey-packages/master/icons/enscape2.png</iconUrl>
     <licenseUrl>https://enscape3d.com/download/Enscape_EULA.pdf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <docsUrl>https://www.rhino3d.com/6/new/documentation</docsUrl>
+    <docsUrl>hhttps://enscape3d.com/knowledge-base/</docsUrl>
     <summary>Experience architectural projects within just a click! The real-time rendering now supports virtual reality with Oculus Rift &amp; HTC Vive.</summary>
     <tags>enscape vr oculus htcvive rhino revit sketchup archicad</tags>
     <description><![CDATA[
