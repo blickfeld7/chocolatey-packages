@@ -6,7 +6,7 @@
     <version>2.6.0</version>
     <authors>Enscape GmbH</authors>
     <projectUrl>https://enscape3d.com/downloads</projectUrl>
-    <packageSourceUrl>http://github.com/blickfeld7/chocolatey-packages/automatic/enscape2</packageSourceUrl>
+    <packageSourceUrl>https://github.com/blickfeld7/chocolatey-packages/tree/master/automatic/enscape2</packageSourceUrl>
     <owners>blickfeld7</owners>
     <title>Enscape™ 2.x</title>
     <iconUrl>https://raw.githubusercontent.com/blickfeld7/chocolatey-packages/master/icons/enscape2.jpg</iconUrl>
